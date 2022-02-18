@@ -75,7 +75,7 @@ document.getElementById("book-form").addEventListener("submit", (e) => {
   if (title === "" || author === "" || isbn === "") {
     ui.showAlert("Please fill in all fields!", "error");
     ui.clearFields();
-  } else if (isNaN(isbn) || isbn !== 13) {
+  } else if (isNaN(isbn) || isbn.length !== 13) {
     ui.showAlert("Введите номер правильно!", "error");
   } else {
     ui.addBookToList(book);
